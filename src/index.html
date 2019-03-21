@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Text Share</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="index.css"> -->
+  <!-- <script src="index.js"></script> -->
+  <style>
+    h2, section, form, label, button {
+      margin: 16px;
+    }
+
+    section, form, label {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <form action="/" method="POST">
+      <label>
+        <div className="label-heading">
+          Key
+        </div>
+
+        <input type="text" name="key" autofocus required max-length="9999" />
+      </label>
+
+      <label>
+        <div className="label-heading">
+          Value
+        </div>
+
+        <textarea name="value" required max-length="9999"></textarea>
+      </label>
+
+      <button>
+        Submit
+      </button>
+    </form>
+
+    <h2>Caution</h2>
+
+    <section>
+      Never submit password or secret things.
+    </section>
+  </main>
+</body>
+
+</html>
