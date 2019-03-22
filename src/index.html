@@ -9,13 +9,25 @@
   <!-- <link rel="stylesheet" type="text/css" media="screen" href="index.css"> -->
   <!-- <script src="index.js"></script> -->
   <style>
-    h2, section, form, label, button {
+    body {
       margin: 16px;
+      padding: 0;
     }
 
-    section, form, label {
+    section,
+    form {
       display: flex;
       flex-flow: column nowrap;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 16px;
+    }
+
+    button {
+      grid-column: 1 / 3;
     }
   </style>
 </head>
@@ -23,21 +35,21 @@
 <body>
   <main>
     <form action="/" method="POST">
-      <label>
-        <div className="label-heading">
-          Key
-        </div>
-
-        <input type="text" name="key" autofocus required max-length="9999" />
+      <label for="key-input-id" class="label-heading">
+        Key
       </label>
 
-      <label>
-        <div className="label-heading">
-          Value
-        </div>
+      <input
+        type="text" name="key" id="key-input-id"
+        autofocus required max-length="1000" />
 
-        <textarea name="value" required max-length="9999"></textarea>
+      <label for="value-input-id" class="label-heading">
+        Value
       </label>
+
+      <textarea
+        name="value" id="value-input-id"
+        required max-length="4000" rows="4"></textarea>
 
       <button>
         Submit

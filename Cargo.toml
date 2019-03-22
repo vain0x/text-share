@@ -6,6 +6,10 @@ edition = "2018"
 
 [dependencies]
 actix-web = "0.7"
+env_logger = "*"
 futures = "*"
+log = "*"
+postgres = "*"
+r2d2_postgres = "*"
 serde = "*"
 serde_derive = "*"
