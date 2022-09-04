@@ -4,5 +4,5 @@
 
 ## Usage
 
-- At [Text Share](https://text-share.herokuapp.com), submit key-value pair.
-- Access `https://text-share.herokuapp.com/<key>` to get the value.
+- At `/`, submit key-value pair.
+- Access `GET /<key>` to get the value.
